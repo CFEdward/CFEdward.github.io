@@ -9,6 +9,7 @@
         :root {
             --primary-bg: #0A0819;
             --accent-purple: #4A2E8A;
+            --header-footer-purple: #2A184E;
             --text-white: #F5F5F5;
             --hover-purple: #6B4C9A;
         }
@@ -29,7 +30,7 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(10, 8, 25, 0.95);
+            background: var(--header-footer-purple);
             padding: 1rem 2rem;
             display: flex;
             align-items: center;
@@ -80,7 +81,7 @@
         }
 
         .fa-github {
-            color: #333333;
+            color: #F5F5F5;
         }
 
         .fa-youtube {
@@ -101,16 +102,99 @@
                 color: var(--hover-purple);
             }
 
+        .all-projects {
+            padding: 8rem 0 2rem;
+        }
+
+        .projects-section {
+            margin-bottom: 4rem;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0 2rem 1rem;
+            font-size: 1.5rem;
+        }
+
+            .section-header i {
+                color: var(--accent-purple);
+            }
+
+        .projects-container {
+            position: relative;
+            max-width: 100%;
+        }
+
         .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            display: flex;
             gap: 2rem;
-            padding: 8rem 2rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
+            max-width: 100%;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+            scrollbar-color: var(--accent-purple) var(--primary-bg);
+            padding: 0 3rem;
+        }
+
+            .projects-grid::-webkit-scrollbar {
+                display: none;
+            }
+
+        .projects-grid {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .scroll-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background: var(--accent-purple);
+            border: none;
+            border-radius: 50%;
+            color: var(--text-white);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s, opacity 0.3s;
+            z-index: 10;
+            opacity: 0.8;
+        }
+
+            .scroll-arrow:hover {
+                background: var(--hover-purple);
+                opacity: 1;
+            }
+
+            .scroll-arrow:disabled {
+                opacity: 0.3;
+                cursor: not-allowed;
+            }
+
+        .scroll-left {
+            left: 1rem;
+        }
+
+        .scroll-right {
+            right: 1rem;
+        }
+
+        .projects-section:first-of-type .project-card {
+            flex: 0 0 375px; /* 25% larger than 300px */
+        }
+
+        .projects-section:first-of-type .card-image {
+            height: 250px; /* 25% larger than 200px */
         }
 
         .project-card {
+            flex: 0 0 300px;
             background: var(--accent-purple);
             border-radius: 10px;
             overflow: hidden;
@@ -151,6 +235,30 @@
             display: none;
         }
 
+        footer {
+            background: var(--header-footer-purple);
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .footer-email {
+            font-size: 1.1rem;
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
         @media (max-width: 768px) {
             .nav-header {
                 padding: 1rem;
@@ -189,9 +297,33 @@
                 order: 2;
             }
 
-            .projects-grid {
+            .all-projects {
                 padding-top: 5rem;
             }
+
+            .scroll-arrow {
+                width: 32px;
+                height: 32px;
+            }
+
+            .section-header {
+                font-size: 1.2rem;
+            }
+
+            footer {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Custom Engine Icons */
+        .engine-icon {
+            width: 1.2em;
+            height: 1.2em;
+            vertical-align: middle;
+        }
+
+        .fa-unity {
+            color: #888888;
         }
     </style>
 </head>
@@ -221,55 +353,168 @@
         </div>
     </nav>
 
-    <main class="projects-grid" id="projects">
-        <a href="pegasus.html" class="project-card">
-            <div class="card-image" style="background-image: url('https://via.placeholder.com/300x200')"></div>
-            <div class="card-content">
-                <h3>Pegasus</h3>
-                <p>Advanced biological simulation system with surgical features and patient monitoring.</p>
+    <div class="all-projects" id="projects">
+        <!-- Unreal Engine Projects Section -->
+        <section class="projects-section">
+            <h2 class="section-header">
+                <img src="Content\ue_icon.png" alt="UE_icon" style="width:25px;height:25px;">
+                Unreal Engine Projects
+            </h2>
+            <div class="projects-container">
+                <button class="scroll-arrow scroll-left" aria-label="Scroll left">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="projects-grid">
+                    <a href="pegasus.html" class="project-card">
+                        <div class="card-image" style="background-image: url('https://via.placeholder.com/300x200')"></div>
+                        <div class="card-content">
+                            <h3>Pegasus</h3>
+                            <p>Advanced biological simulation system with surgical features and patient monitoring.</p>
+                        </div>
+                    </a>
+                    <a href="mindcaller.html" class="project-card">
+                        <div class="card-image" style="background-image: url('https://via.placeholder.com/300x200')"></div>
+                        <div class="card-content">
+                            <h3>Mindcaller</h3>
+                            <p>Adventure game with real-time metrics system and scientific puzzle mechanics.</p>
+                        </div>
+                    </a>
+                    <a href="gauntlet.html" class="project-card">
+                        <div class="card-image" style="background-image: url('https://via.placeholder.com/300x200')"></div>
+                        <div class="card-content">
+                            <h3>Gauntlet</h3>
+                            <p>First-person robotic combat game with basic AI behaviors and physics systems.</p>
+                        </div>
+                    </a>
+                    <a href="mars-invasion.html" class="project-card">
+                        <div class="card-image" style="background-image: url('https://via.placeholder.com/300x200')"></div>
+                        <div class="card-content">
+                            <h3>Mars Invasion</h3>
+                            <p>Neapolitan-based strategy game defending against alien forces on Martian terrain.</p>
+                        </div>
+                    </a>
+                </div>
+                <button class="scroll-arrow scroll-right" aria-label="Scroll right">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
-        </a>
+        </section>
 
-        <a href="mindcaller.html" class="project-card">
-            <div class="card-image" style="background-image: url('https://via.placeholder.com/300x200')"></div>
-            <div class="card-content">
-                <h3>Mindcaller</h3>
-                <p>Adventure game with real-time metrics system and scientific puzzle mechanics.</p>
+        <!-- Unity Projects Section -->
+        <section class="projects-section">
+            <h2 class="section-header">
+                <i class="fab fa-unity" style="color: #888888;"></i>
+                Unity Projects
+            </h2>
+            <div class="projects-container">
+                <button class="scroll-arrow scroll-left" aria-label="Scroll left">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="projects-grid">
+                    <a href="project1.html" class="project-card">
+                        <div class="card-image" style="background-image: url('https://via.placeholder.com/300x200')"></div>
+                        <div class="card-content">
+                            <h3>Project 1</h3>
+                            <p>Unity project description goes here.</p>
+                        </div>
+                    </a>
+                    <a href="project2.html" class="project-card">
+                        <div class="card-image" style="background-image: url('https://via.placeholder.com/300x200')"></div>
+                        <div class="card-content">
+                            <h3>Project 2</h3>
+                            <p>Unity project description goes here.</p>
+                        </div>
+                    </a>
+                    <a href="project3.html" class="project-card">
+                        <div class="card-image" style="background-image: url('https://via.placeholder.com/300x200')"></div>
+                        <div class="card-content">
+                            <h3>Project 3</h3>
+                            <p>Unity project description goes here.</p>
+                        </div>
+                    </a>
+                    <a href="project4.html" class="project-card">
+                        <div class="card-image" style="background-image: url('https://via.placeholder.com/300x200')"></div>
+                        <div class="card-content">
+                            <h3>Project 4</h3>
+                            <p>Unity project description goes here.</p>
+                        </div>
+                    </a>
+                </div>
+                <button class="scroll-arrow scroll-right" aria-label="Scroll right">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
-        </a>
+        </section>
+    </div>
 
-        <a href="gauntlet.html" class="project-card">
-            <div class="card-image" style="background-image: url('https://via.placeholder.com/300x200')"></div>
-            <div class="card-content">
-                <h3>Gauntlet</h3>
-                <p>First-person robotic combat game with basic AI behaviors and physics systems.</p>
+    <footer>
+        <div class="footer-content">
+            <a href="mailto:placeholder@email.com" class="email-link footer-email">placeholder@email.com</a>
+            <div class="copyright">
+                Copyright © 2023 Kobart Club. All rights reserved.
             </div>
-        </a>
-
-        <a href="mars-invasion.html" class="project-card">
-            <div class="card-image" style="background-image: url('https://via.placeholder.com/300x200')"></div>
-            <div class="card-content">
-                <h3>Mars Invasion</h3>
-                <p>Neapolitan-based strategy game defending against alien forces on Martian terrain.</p>
-            </div>
-        </a>
-    </main>
+        </div>
+    </footer>
 
     <script>
+        // Properly ordered JavaScript
         const menuToggle = document.querySelector('.menu-toggle');
         const navLinks = document.querySelector('.nav-links');
 
+        // Menu toggle functionality
         menuToggle.addEventListener('click', (e) => {
             e.stopPropagation();
             navLinks.classList.toggle('active');
+            setTimeout(updateContentMargin, 50); // Small delay for transition
         });
 
+        // Close menu when clicking outside
         document.addEventListener('click', (e) => {
             if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
                 navLinks.classList.remove('active');
+                updateContentMargin();
             }
         });
 
+        // Dynamic content spacing
+        function updateContentMargin() {
+            const navHeader = document.querySelector('.nav-header');
+            const allProjects = document.querySelector('.all-projects');
+            allProjects.style.marginTop = `${navHeader.offsetHeight}px`;
+        }
+
+        // Initial setup
+        updateContentMargin();
+        window.addEventListener('resize', updateContentMargin);
+
+        // Scroll functionality for project grids
+        document.querySelectorAll('.projects-container').forEach(container => {
+            const scrollContainer = container.querySelector('.projects-grid');
+            const leftButton = container.querySelector('.scroll-left');
+            const rightButton = container.querySelector('.scroll-right');
+            const scrollAmount = 320;
+
+            function updateButtonStates() {
+                leftButton.disabled = scrollContainer.scrollLeft <= 0;
+                rightButton.disabled = scrollContainer.scrollLeft >=
+                    scrollContainer.scrollWidth - scrollContainer.clientWidth;
+            }
+
+            updateButtonStates();
+
+            leftButton.addEventListener('click', () => {
+                scrollContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            });
+
+            rightButton.addEventListener('click', () => {
+                scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            });
+
+            scrollContainer.addEventListener('scroll', updateButtonStates);
+            window.addEventListener('resize', updateButtonStates);
+        });
+
+        // Smooth scroll for navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
