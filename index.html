@@ -3,32 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kobart Club - Game Developer Portfolio</title>
+    <title>Eduard Ciofu - Personal Portfolio</title>
+    <link rel="icon" type="image/png" href="Content/icons/ue_favicon.png">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <nav class="nav-header">
         <div class="header-titles">
-            <h1>KOBART CLUB</h1>
-            <div class="subtitle">Game Developer & Unreal Engine Specialist</div>
+            <a href="#" class="home-link">
+                <h1>EDUARD CIOFU</h1>
+            </a>
+            <div class="subtitle">Gameplay Programmer with experience in Unreal Engine C++</div>
         </div>
         <div class="mobile-socials">
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.linkedin.com/in/eduard-ciofu-952306227/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/CFEdward" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.youtube.com/@KinglessKing7" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
         </div>
         <button class="menu-toggle" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
         </button>
         <div class="nav-links">
-            <a href="#projects">Projects</a>
+            <a href="#">Projects</a>
             <a href="#resume">Resume</a>
-            <a href="mailto:placeholder@email.com" class="email-link">placeholder@email.com</a>
+            <a href="mailto:cfedward@proton.me" class="email-link">cfedward@proton.me</a>
             <div class="social-icons desktop-socials">
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.linkedin.com/in/eduard-ciofu-952306227/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/CFEdward" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.youtube.com/@KinglessKing7" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
     </nav>
@@ -37,7 +40,7 @@
         <!-- Unreal Engine Projects Section -->
         <section class="projects-section">
             <h2 class="section-header">
-                <img src="Content\ue_icon.png" alt="UE_icon" style="width:25px;height:25px;">
+                <img src="Content\icons\ue_icon.png" alt="UE_icon" style="width:25px;height:25px;">
                 Unreal Engine Projects
             </h2>
             <div class="projects-container">
@@ -45,32 +48,32 @@
                     <i class="fas fa-chevron-left"></i>
                 </button>
                 <div class="projects-grid">
-                    <a href="projects/project.html" class="project-card">
-                        <div class="card-image" style="background-image: url('https://via.placeholder.com/300x200')"></div>
+                    <a href="projects/pegasus.html" class="project-card">
+                        <div class="card-image" style="background-image: url('Content/project_thumbnails/pegasus_thumb.jpg') "></div>
                         <div class="card-content">
                             <h3>Pegasus</h3>
-                            <p>Advanced biological simulation system with surgical features and patient monitoring.</p>
+                            <p>My most ambitious project, a shooter with a wide range of features, from weapon Data Tables to item pickups, AI, gunplay, responsive controls etc.</p>
                         </div>
                     </a>
-                    <a href="mindcaller.html" class="project-card">
-                        <div class="card-image" style="background-image: url('https://via.placeholder.com/300x200')"></div>
+                    <a href="projects/windcaller.html" class="project-card">
+                        <div class="card-image" style="background-image: url('Content/project_thumbnails/windcaller_thumb.jpg')"></div>
                         <div class="card-content">
-                            <h3>Mindcaller</h3>
-                            <p>Adventure game with real-time metrics system and scientific puzzle mechanics.</p>
+                            <h3>Windcaller</h3>
+                            <p>The basis for a hack&slash / adventure game featuring melee combat, a stamina system and basic AI and item pickups.</p>
                         </div>
                     </a>
-                    <a href="gauntlet.html" class="project-card">
-                        <div class="card-image" style="background-image: url('https://via.placeholder.com/300x200')"></div>
+                    <a href="projects/gauntlet.html" class="project-card">
+                        <div class="card-image" style="background-image: url('Content/project_thumbnails/gauntlet_thumb.png')"></div>
                         <div class="card-content">
                             <h3>Gauntlet</h3>
-                            <p>First-person robotic combat game with basic AI behaviors and physics systems.</p>
+                            <p>My first attempt at creating a shooter game. It features very basic gunplay and AI.</p>
                         </div>
                     </a>
-                    <a href="mars-invasion.html" class="project-card">
-                        <div class="card-image" style="background-image: url('https://via.placeholder.com/300x200')"></div>
+                    <a href="projects/mars_invasion.html" class="project-card">
+                        <div class="card-image" style="background-image: url('Content/project_thumbnails/mars_invasion_thumb.png')"></div>
                         <div class="card-content">
                             <h3>Mars Invasion</h3>
-                            <p>Neapolitan-based strategy game defending against alien forces on Martian terrain.</p>
+                            <p>This is the first and only project I fully created with Blueprints instead of C++. It’s an isometric shooter where you have to defend against waves of enemies.</p>
                         </div>
                     </a>
                 </div>
@@ -129,9 +132,12 @@
 
     <footer>
         <div class="footer-content">
-            <a href="mailto:placeholder@email.com" class="email-link footer-email">placeholder@email.com</a>
+            <a href="mailto:cfedward@proton.me" class="email-link footer-email">cfedward@proton.me</a>
             <div class="copyright">
-                Copyright © 2023 Kobart Club. All rights reserved.
+                <a target="_blank" href="https://icons8.com/icon/69503/unreal-engine">Unreal Engine</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+            </div>
+            <div class="copyright">
+                Copyright © 2025 Eduard Ciofu. All rights reserved.
             </div>
         </div>
     </footer>
