@@ -39,6 +39,11 @@
 
     <main class="project-main">
         <div class="project-header">
+            <a href="../index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+                Back to Projects
+            </a>
+
             <h1 class="project-title">Pegasus</h1>
             <a href="https://github.com/CFEdward/second-shooter" class="github-button" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-github"></i>
@@ -50,32 +55,44 @@
             <div class="project-details">
                 <section class="project-section">
                     <h3>Overview</h3>
-                    <p>A more ambitious shooter project where I explored many more Unreal Engine features, as well as new gameplay mechanics.
-                    A few examples are Data Tables, basic inventory system with item pickups, enemy AI Behavior Trees, gunplay, responsive controls etc.</p>
+                    <ul>
+                        <li>Complex Animation Blueprints</li>
+                        <li>AI Behavior Trees</li>
+                        <li>Shooting system</li>
+                        <li>Simple inventory</li>
+                        <li>Data driven weapon types</li>
+                        <li>Dynamic crosshairs</li>
+                        <li>Material creation</li>
+                    </ul>
                 </section>
 
                 <section class="project-section">
                     <h3>Technical Details</h3>
                     <ul>
                         <li><strong>Engine:</strong> Unreal Engine 4</li>
-                        <li><strong>Team Size:</strong> Solo Developer</li>
-                        <li><strong>Languages Used:</strong> C++, supporting Blueprints</li>
+                        <li><strong>Genre:</strong> Shooter</li>
+                        <li><strong>Platform:</strong> PC</li>
                     </ul>
                 </section>
 
                 <section class="project-section">
                     <h3>Features</h3>
-                    <ul>
-                        <li>AI Behavior Trees</li>
-                        <li>Procedural Content Generation</li>
-                        <li>Multiplayer Support</li>
-                        <li>Dynamic Weather System</li>
-                    </ul>
-                </section>
-
-                <section class="project-section">
-                    <h3>Development Challenges</h3>
-                    <p>Describe technical challenges faced during development and how they were overcome. Highlight innovative solutions and lessons learned.</p>
+                    <p>
+                        A more ambitious shooter project where I explored many more Unreal Engine features, as well as new gameplay mechanics.
+                        A few examples are extensive usage of Animation Blueprints (through Anim Instance), 1D and 2D Blendspaces, strafing, turn-in-place,
+                        Aim Offsets, Inverse Kinematics, animation curves, run leaning, hips turning and crouching.
+                    </p><br />
+                    <p>
+                        Weapon fire with recoil animations and reloading. Simple inventory to hold different types of weapons, with automatic
+                        and semi-automatic gunfire. Weapon types are data driven and stored in data tables for easy modifications or additions.
+                    </p><br />
+                    <p>
+                        Dynamic crosshairs that spread in reaction to character speed, weapon fire, aiming and jumping.
+                    </p><br />
+                    <p>
+                        Some Material creation, including post-process materials, outline effects, glow/pulse effects
+                        and material functions. Enemy AI with Behavior Trees and Blackboard components.
+                    </p>
                 </section>
             </div>
 

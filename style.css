@@ -246,6 +246,117 @@ h1 {
     display: none;
 }
 
+/* Custom Engine Icons */
+.engine-icon {
+    width: 1.2em;
+    height: 1.2em;
+    vertical-align: middle;
+}
+
+.fa-unity {
+    color: #888888;
+}
+
+/* Additional project page styles */
+.project-main {
+    padding: 8rem 2rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.github-button {
+    background: var(--accent-purple);
+    color: var(--text-white);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+    .github-button:hover {
+        background: var(--hover-purple);
+        transform: translateY(-2px);
+    }
+
+    .github-button i {
+        font-size: 1.2em;
+    }
+
+.back-button {
+    background: var(--accent-purple);
+    color: var(--text-white);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+    .back-button:hover {
+        background: var(--hover-purple);
+        transform: translateY(-2px);
+    }
+
+.project-title {
+    font-size: 3rem;
+    text-align: center;
+    flex-grow: 1;
+    margin: 0;
+}
+
+.project-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.project-details {
+    padding-right: 2rem;
+}
+
+.project-section {
+    margin-bottom: 2.5rem;
+}
+
+    .project-section h3 {
+        color: var(--accent-purple);
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    background: var(--primary-bg);
+}
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
 footer {
     background: var(--header-footer-purple);
     padding: 2rem;
@@ -281,6 +392,7 @@ footer {
     font-size: 0.9rem;
     opacity: 0.8;
 }
+
 
 @media (max-width: 768px) {
     .nav-header {
@@ -344,10 +456,10 @@ footer {
 
     .project-header {
         flex-direction: column;
-        text-align: center;
-        gap: 1.5rem;
+        gap: 1rem;
     }
 
+    .back-button,
     .github-button {
         width: 100%;
         justify-content: center;
@@ -387,96 +499,3 @@ footer {
         padding: 1.5rem;
     }
 }
-
-/* Custom Engine Icons */
-.engine-icon {
-    width: 1.2em;
-    height: 1.2em;
-    vertical-align: middle;
-}
-
-.fa-unity {
-    color: #888888;
-}
-
-/* Additional project page styles */
-.project-main {
-    padding: 8rem 2rem 2rem;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.project-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
-
-.github-button {
-    background: var(--accent-purple);
-    color: var(--text-white);
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.8rem;
-    transition: all 0.3s ease;
-}
-
-    .github-button:hover {
-        background: var(--hover-purple);
-        transform: translateY(-2px);
-    }
-
-    .github-button i {
-        font-size: 1.2em;
-    }
-
-.project-title {
-    font-size: 3rem;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-.project-columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: start;
-}
-
-.project-details {
-    padding-right: 2rem;
-}
-
-.project-section {
-    margin-bottom: 2.5rem;
-}
-
-    .project-section h3 {
-        color: var(--accent-purple);
-        margin-bottom: 1rem;
-        font-size: 1.5rem;
-    }
-
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    border-radius: 10px;
-    background: var(--primary-bg);
-}
-
-    .video-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: none;
-    }
