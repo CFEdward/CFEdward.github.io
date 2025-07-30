@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Same head as portfolio -->
+    <style>
+        /* Additional resume-specific styles */
+        .resume-container {
+            max-width: 1200px;
+            margin: 100px auto;
+            padding: 0 2rem;
+            color: #e0e0e0;
+        }
+
+        .resume-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .resume-left {
+            border-right: 2px solid #2a2a2a;
+            padding-right: 2rem;
+        }
+
+        .resume-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .section-title {
+            color: #4a8bfc;
+            font-size: 1.4rem;
+            margin-bottom: 1.2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #4a8bfc;
+            display: inline-block;
+        }
+
+        .experience-item {
+            margin-bottom: 1.8rem;
+        }
+
+        .experience-title {
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .company, .date {
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        .date {
+            float: right;
+        }
+
+        .skill-list {
+            list-style: none;
+            padding-left: 1rem;
+        }
+
+            .skill-list li::before {
+                content: "▹";
+                color: #4a8bfc;
+                margin-right: 0.5rem;
+            }
+
+        .certificate-item {
+            margin-bottom: 1rem;
+        }
+
+        .certificate-title {
+            font-weight: 600;
+        }
+    </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduard Ciofu - Personal Portfolio</title>
+    <link rel="icon" type="image/png" href="Content/icons/ue_favicon.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Same navigation as portfolio -->
+    <nav class="nav-header">
+        <div class="header-titles">
+            <a href="#" class="home-link">
+                <h1>EDUARD CIOFU</h1>
+            </a>
+            <div class="subtitle">Gameplay Programmer with experience in Unreal Engine C++</div>
+        </div>
+        <div class="mobile-socials">
+            <a href="https://www.linkedin.com/in/eduard-ciofu-952306227/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/CFEdward" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.youtube.com/@KinglessKing7" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links">
+            <a href="#">Projects</a>
+            <a href="#resume">Resume</a>
+            <a href="mailto:cfedward@proton.me" class="email-link">cfedward@proton.me</a>
+            <div class="social-icons desktop-socials">
+                <a href="https://www.linkedin.com/in/eduard-ciofu-952306227/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/CFEdward" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.youtube.com/@KinglessKing7" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="resume-container">
+        <div class="resume-header" style="text-align: center; margin-bottom: 3rem;">
+            <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">Eduard Ciofu</h1>
+            <div class="contact-info" style="color: #888;">
+                <p>Groningen, Netherlands</p>
+                <p>
+                    <a href="mailto:cfedward@proton.me" style="color: #4a8bfc; text-decoration: none;">cfedward@proton.me</a> |
+                    +31 6 51715894
+                </p>
+            </div>
+        </div>
+
+        <div class="resume-grid">
+            <!-- Left Column -->
+            <div class="resume-left">
+                <section class="resume-section">
+                    <h2 class="section-title">Skills</h2>
+                    <ul class="skill-list">
+                        <li>Unreal Engine (C++/Blueprints)</li>
+                        <li>C++ Programming</li>
+                        <li>Unity & C#</li>
+                        <li>Version Control (Git)</li>
+                        <li>Object-Oriented Design</li>
+                        <li>English & Romanian</li>
+                    </ul>
+                </section>
+
+                <section class="resume-section">
+                    <h2 class="section-title">Certificates</h2>
+                    <div class="certificate-item">
+                        <div class="certificate-title">Unreal Engine C++ Ultimate Shooter</div>
+                        <div class="company">Udemy</div>
+                    </div>
+                    <div class="certificate-item">
+                        <div class="certificate-title">Unreal Engine C++ Game Developer</div>
+                        <div class="company">Udemy</div>
+                    </div>
+                    <div class="certificate-item">
+                        <div class="certificate-title">The Ultimate Git Course</div>
+                        <div class="company">Udemy</div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column -->
+            <div class="resume-right">
+                <section class="resume-section">
+                    <h2 class="section-title">Experience</h2>
+
+                    <div class="experience-item">
+                        <div class="experience-title">QA Tester</div>
+                        <div class="company">Electronic Arts <span class="date">05/2019 - 08/2019</span></div>
+                        <ul class="skill-list" style="margin-top: 0.5rem;">
+                            <li>Tested Star Wars: Jedi Fallen Order</li>
+                            <li>Managed bug reports via Jira</li>
+                            <li>Collaborated with development teams</li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-title">Content Creator</div>
+                        <div class="company">YouTube Channel <span class="date">2010 - 2012</span></div>
+                        <ul class="skill-list" style="margin-top: 0.5rem;">
+                            <li>Grew to 1,500+ subscribers</li>
+                            <li>Produced gameplay content</li>
+                            <li>Managed network partnership</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="resume-section">
+                    <h2 class="section-title">Education</h2>
+                    <div class="experience-item">
+                        <div class="experience-title">Game Design Major</div>
+                        <div class="company">Hanzehogeschool Groningen <span class="date">2019 - Present</span></div>
+                    </div>
+                </section>
+
+                <section class="resume-section">
+                    <h2 class="section-title">Projects</h2>
+                    <div class="experience-item">
+                        <ul class="skill-list">
+                            <li>4 Unreal Engine C++ Projects</li>
+                            <li>1 Blueprint-based Project</li>
+                            <li>DayZ Mod Server & Community</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Same footer as portfolio -->
+    <footer>
+        <div class="footer-content">
+            <a href="mailto:cfedward@proton.me" class="email-link footer-email">cfedward@proton.me</a>
+            <div class="copyright">
+                <a target="_blank" href="https://icons8.com/icon/69503/unreal-engine">Unreal Engine</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+            </div>
+            <div class="copyright">
+                Copyright © 2025 Eduard Ciofu. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
