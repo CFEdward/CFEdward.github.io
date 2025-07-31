@@ -18,10 +18,22 @@ document.addEventListener('click', (e) => {
 });
 
 // Dynamic content spacing
+// Update the content margin function to handle project pages
 function updateContentMargin() {
     const navHeader = document.querySelector('.nav-header');
+    const navHeaderHeight = navHeader.offsetHeight;
+
+    // For homepage
     const allProjects = document.querySelector('.all-projects');
-    allProjects.style.marginTop = `${navHeader.offsetHeight}px`;
+    if (allProjects) {
+        allProjects.style.marginTop = `${navHeaderHeight}px`;
+    }
+
+    // For project pages
+    const projectMain = document.querySelector('.project-main');
+    if (projectMain) {
+        projectMain.style.paddingTop = `${navHeaderHeight + 40}px`;
+    }
 }
 
 // Initial setup

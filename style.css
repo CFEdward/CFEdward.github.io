@@ -455,7 +455,7 @@ footer {
     }
 
     .project-main {
-        padding: 6rem 0 2rem;
+        padding-top: 7rem !important;
     }
 
     .project-title {
@@ -467,6 +467,7 @@ footer {
     .project-header {
         display: flex;
         flex-direction: column;
+        padding-top: 1rem;
     }
 
     /* Hide desktop back button on mobile */
