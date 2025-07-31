@@ -311,6 +311,15 @@ h1 {
         transform: translateY(-2px);
     }
 
+    .back-button i {
+        font-size: 1.2em;
+    }
+
+/* Mobile-only back button (hidden by default) */
+.mobile-only {
+    display: none;
+}
+
 .project-title {
     font-size: 3rem;
     text-align: center;
@@ -454,15 +463,45 @@ footer {
         padding: 0 1rem;
     }
 
+    /* Create a flex container for buttons */
     .project-header {
+        display: flex;
         flex-direction: column;
-        gap: 1rem;
     }
 
-    .back-button,
-    .github-button {
+    /* Hide desktop back button on mobile */
+    .desktop-only {
+        display: none;
+    }
+
+    /* Show mobile back button */
+    .mobile-only {
+        display: inline-flex;
         width: 100%;
+    }
+
+    /* Style both buttons to take equal space */
+    .mobile-only,
+    .github-button {
+        flex: 1;
+        padding: 1rem;
         justify-content: center;
+    }
+
+    /* Align buttons horizontally */
+    .mobile-only + .github-button {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    /* Create a flex container for the buttons */
+    .project-buttons-container {
+        display: flex;
+        gap: 1rem;
+        width: 100%;
+        margin-top: 1rem;
     }
 
     .project-columns {
