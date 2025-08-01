@@ -294,6 +294,22 @@ h1 {
         font-size: 1.2em;
     }
 
+    .github-button.disabled {
+        background: #3a3a3a !important;
+        opacity: 0.6;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+
+    .github-button.disabled:hover {
+        background: #3a3a3a !important;
+        transform: none;
+    }
+
+    .github-button.disabled i {
+        opacity: 0.5;
+    }
+
 .back-button {
     background: var(--accent-purple);
     color: var(--text-white);
@@ -355,6 +371,7 @@ h1 {
     overflow: hidden;
     border-radius: 10px;
     background: var(--primary-bg);
+    flex: 0 0 auto;
 }
 
     .video-container iframe {
@@ -365,6 +382,156 @@ h1 {
         height: 100%;
         border: none;
     }
+
+/* Gallery Styles */
+.project-media {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.gallery-section {
+    flex: 0 0 auto;
+    max-height: 50vh; /* Constrain gallery height */
+    overflow: hidden;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--accent-purple);
+}
+
+.gallery-title {
+    color: var(--accent-purple);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.gallery-container {
+    position: relative;
+    max-width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+.gallery-grid {
+    display: flex;
+    gap: 2rem;
+    max-width: 100%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 0.5rem 0;
+    height: 100%;
+    flex: 0 0 30%; /* Adjust based on your needs */
+    max-height: 300px; /* Constrain item height */
+}
+
+    .gallery-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+.gallery-item {
+    flex: 0 0 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    background: var(--accent-purple);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-height: 100%;
+}
+
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        aspect-ratio: 16/9;
+    }
+
+    .gallery-item:hover {
+        transform: translateY(-5px);
+    }
+
+/* Scroll arrows for gallery */
+.gallery-scroll-left,
+.gallery-scroll-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: var(--accent-purple);
+    border: none;
+    border-radius: 50%;
+    color: var(--text-white);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, opacity 0.3s;
+    z-index: 10;
+    opacity: 0.8;
+}
+
+    .gallery-scroll-left:hover,
+    .gallery-scroll-right:hover {
+        background: var(--hover-purple);
+        opacity: 1;
+    }
+
+    .gallery-scroll-left:disabled,
+    .gallery-scroll-right:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+    }
+
+.gallery-scroll-left {
+    left: 0.5rem;
+}
+
+.gallery-scroll-right {
+    right: 0.5rem;
+}
+
+/* Lightbox Styles */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+    .lightbox-content img {
+        max-width: 100%;
+        max-height: 80vh;
+        border-radius: 8px;
+        border: 2px solid var(--accent-purple);
+    }
+
+.lightbox-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 2001;
+}
 
 footer {
     background: var(--header-footer-purple);
@@ -402,6 +569,110 @@ footer {
     opacity: 0.8;
 }
 
+/* Additional resume-specific styles */
+.resume-container {
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 0 2rem;
+    color: #e0e0e0;
+}
+
+.resume-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.resume-left {
+    border-right: 2px solid #2a2a2a;
+    padding-right: 2rem;
+}
+
+.resume-section {
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.section-title {
+    color: #4a8bfc;
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+    position: relative;
+}
+
+    .section-title::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background: #4a8bfc;
+    }
+
+.experience-item {
+    margin-bottom: 1.8rem;
+}
+
+.experience-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.company, .date {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.date {
+    float: right;
+}
+
+.skill-list {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+    .skill-list li::before {
+        content: "▹";
+        color: #4a8bfc;
+        margin-right: 0.5rem;
+    }
+
+.certificate-item {
+    margin-bottom: 1rem;
+}
+
+.certificate-title {
+    font-weight: 600;
+}
+
+/* Desktop-specific gallery adjustments */
+@media (min-width: 769px) {
+    .project-columns {
+        align-items: stretch; /* Make columns equal height */
+    }
+
+    .project-details {
+        height: 100%;
+        overflow-y: auto; /* Add scroll if content overflows */
+    }
+
+    .project-media {
+        height: 100%;
+    }
+
+    .gallery-section {
+        max-height: 40vh; /* Adjust based on your layout */
+    }
+
+    .gallery-grid {
+        max-height: calc(100% - 20px); /* Account for title */
+    }
+}
 
 @media (max-width: 768px) {
     .nav-header {
@@ -535,7 +806,100 @@ footer {
         width: calc(100% + 2rem);
     }
 
+    .gallery-section {
+        max-height: none;
+    }
+
+    .gallery-container {
+        padding: 0 1.5rem;
+    }
+
+    .gallery-grid {
+        gap: 1.5rem;
+        padding: 0.5rem;
+    }
+
+    .gallery-item {
+        flex: 0 0 280px;
+        max-height: 250px;
+    }
+
+    .gallery-scroll-left,
+    .gallery-scroll-right {
+        width: 32px;
+        height: 32px;
+        font-size: 0.8rem;
+    }
+
     footer {
         padding: 1.5rem;
+    }
+
+    .resume-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .resume-left {
+        border-right: none;
+        padding-right: 0;
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .resume-right {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .resume-section {
+        margin-bottom: 0;
+        padding: 2rem 0;
+        border-bottom: 2px solid #2a2a2a;
+        text-align: center;
+    }
+
+        .resume-section > *:not(.section-title) {
+            text-align: left;
+        }
+
+    /* Center section titles on mobile */
+    .section-title {
+        text-align: center;
+        display: inline-block;
+        width: auto;
+        margin: 0 auto 1.2rem;
+    }
+
+        .section-title::after {
+            width: 100%; /* This will be the width of the text */
+        }
+
+    /* Reorder sections */
+    .resume-container .resume-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .skills-section {
+        order: 1;
+    }
+
+    .experience-section {
+        order: 2;
+    }
+
+    .education-section {
+        order: 3;
+    }
+
+    .certificates-section {
+        order: 4;
+    }
+
+    .projects-section {
+        order: 5;
     }
 }

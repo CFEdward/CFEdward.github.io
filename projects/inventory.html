@@ -45,7 +45,7 @@
                 Back to Projects
             </a>
 
-            <h1 class="project-title">Mars Invasion</h1>
+            <h1 class="project-title">Inventory Plugin</h1>
 
             <!-- Mobile buttons container -->
             <div class="project-buttons-container">
@@ -56,10 +56,10 @@
                 </a>
 
                 <!-- GitHub button -->
-                <span class="github-button disabled">
+                <a href="https://github.com/CFEdward/inventory-plugin/tree/reskin-1" class="github-button" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-github"></i>
-                    No GitHub Repo
-                </span>
+                    GitHub Repo
+                </a>
             </div>
         </div>
 
@@ -69,19 +69,23 @@
                 <section class="project-section">
                     <h3>Overview</h3>
                     <ul>
-                        <li>Top-Down perspective</li>
-                        <li>Waves of enemies</li>
-                        <li>Learned Blueprint scripting</li>
-                        <li>Familiarized with the Engine</li>
+                        <li>Spatial Inventory</li>
+                        <li>Functional Items</li>
+                        <li>Item Fragment System</li>
+                        <li>Tooltip popups</li>
+                        <li>Equipment</li>
+                        <li>Consumables</li>
+                        <li>Stackable Items</li>
+                        <li>Programmed for Multiplayer</li>
                     </ul>
                 </section>
 
                 <section class="project-section">
                     <h3>Technical Details</h3>
                     <ul>
-                        <li><strong>Engine:</strong> Unreal Engine 4</li>
+                        <li><strong>Engine:</strong> Unreal Engine 5</li>
                         <li><strong>Role:</strong> Solo Developer</li>
-                        <li><strong>Genre:</strong> Top-Down Swarm</li>
+                        <li><strong>Genre:</strong> Plugin</li>
                         <li><strong>Platform:</strong> PC</li>
                     </ul>
                 </section>
@@ -89,25 +93,57 @@
                 <section class="project-section">
                     <h3>Features</h3>
                     <p>
-                        One of the very first projects I created in order to learn Unreal Engine, made entirely with Blueprint scripting.
+                        This is a spatial inventory with item grids for different categories (Equippable, Consumable, and Craftable)
+                        and the ability to switch between grids filled with items. Items can be different sizes, each taking up a different
+                        number of squares in the grid, and items can be stackable, allowing for splitting, combining, consuming, and dropping items.
                     </p><br />
                     <p>
-                        It's a very simple game, you control a space marine from a top-down perspective defending against unrelenting waves
-                        of enemies. This project helped me to get familiar with the editor and core concepts like gameplay mechanics, basic
-                        game flow and some basic UI.
+                        This is made possible by an <strong>Item Fragment</strong> system whereby items can be customized by adding modular
+                        "Fragments" to give them functionality. Add a Grid Fragment to make the item capable of taking up multiple squares on
+                        the grid, add an Equippable Fragment to make the item equippable, etc.
                     </p><br />
+                    <p>
+                        The inventory is coded in its own separate plugin, which can be added to multiple game projects.
+                    </p>
                 </section>
             </div>
 
             <!-- Right Column - Video -->
             <div class="project-media">
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/a-SslV_EEPw?autoplay=1&mute=1&rel=0&loop=1&playlist=a-SslV_EEPw"
+                    <iframe src="https://www.youtube.com/embed/UWAOS-_bZyc?autoplay=1&mute=1&rel=0&loop=1&playlist=UWAOS-_bZyc"
                             frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen>
                     </iframe>
                 </div>
+
+                <section class="gallery-section">
+                    <h3 class="gallery-title">Gallery</h3>
+                    <div class="gallery-container">
+                        <button class="scroll-arrow gallery-scroll-left" aria-label="Scroll gallery left">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="gallery-grid">
+                            <div class="gallery-item">
+                                <img src="../Content/project_thumbnails/inventory_fragments.jpg" alt="Pegasus Screenshot 1">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../Content/project_thumbnails/inventory_fragments.jpg" alt="Pegasus Screenshot 2">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../Content/project_thumbnails/inventory_fragments.jpg" alt="Pegasus Screenshot 3">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../Content/project_thumbnails/inventory_fragments.jpg" alt="Pegasus Screenshot 4">
+                            </div>
+                            <!-- Add more items as needed -->
+                        </div>
+                        <button class="scroll-arrow gallery-scroll-right" aria-label="Scroll gallery right">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </section>
             </div>
         </div>
     </main>

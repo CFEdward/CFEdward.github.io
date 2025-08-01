@@ -27,7 +27,7 @@
         </button>
         <div class="nav-links">
             <a href="../index.html">Projects</a>
-            <a href="#resume">Resume</a>
+            <a href="../resume.html">Resume</a>
             <a href="mailto:cfedward@proton.me" class="email-link">cfedward@proton.me</a>
             <div class="social-icons desktop-socials">
                 <a href="https://www.linkedin.com/in/eduard-ciofu-952306227/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -39,56 +39,74 @@
 
     <main class="project-main">
         <div class="project-header">
-            <a href="../index.html" class="back-button">
+            <!-- Desktop back button -->
+            <a href="../index.html" class="back-button desktop-only">
                 <i class="fas fa-arrow-left"></i>
                 Back to Projects
             </a>
 
-            <h1 class="project-title">Project Name</h1>
-            <a href="YOUR_GITHUB_URL" class="github-button" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-github"></i>
-                GitHub
-            </a>
+            <h1 class="project-title">Windcaller</h1>
+
+            <!-- Mobile buttons container -->
+            <div class="project-buttons-container">
+                <!-- Mobile back button -->
+                <a href="../index.html" class="back-button mobile-only">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Projects
+                </a>
+
+                <!-- GitHub button -->
+                <a href="https://github.com/CFEdward/adventure-time" class="github-button" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i>
+                    GitHub Repo
+                </a>
+            </div>
         </div>
+
         <div class="project-columns">
             <!-- Left Column - Project Details -->
             <div class="project-details">
                 <section class="project-section">
                     <h3>Overview</h3>
-                    <p>A detailed description of the project and its core features. Explain the main objectives and what makes this project unique.</p>
+                    <ul>
+                        <li>Melee Combat</li>
+                        <li>Pickups</li>
+                        <li>Equip Weapons</li>
+                        <li>Sprint & Stamina System</li>
+                        <li>Save & Load System</li>
+                        <li>Level hazards</li>
+                    </ul>
                 </section>
 
                 <section class="project-section">
                     <h3>Technical Details</h3>
                     <ul>
-                        <li><strong>Engine:</strong> Unreal Engine 5</li>
-                        <li><strong>Platform:</strong> Windows/Console</li>
-                        <li><strong>Development Time:</strong> 6 months</li>
-                        <li><strong>Team Size:</strong> Solo Developer</li>
-                        <li><strong>Key Technologies:</strong> C++, Blueprints, Physics Simulation</li>
+                        <li><strong>Engine:</strong> Unreal Engine 4</li>
+                        <li><strong>Role:</strong> Solo Developer</li>
+                        <li><strong>Genre:</strong> Action Adventure</li>
+                        <li><strong>Platform:</strong> PC</li>
                     </ul>
                 </section>
 
                 <section class="project-section">
                     <h3>Features</h3>
-                    <ul>
-                        <li>Advanced AI Behavior Trees</li>
-                        <li>Procedural Content Generation</li>
-                        <li>Multiplayer Support</li>
-                        <li>Dynamic Weather System</li>
-                    </ul>
-                </section>
-
-                <section class="project-section">
-                    <h3>Development Challenges</h3>
-                    <p>Describe technical challenges faced during development and how they were overcome. Highlight innovative solutions and lessons learned.</p>
+                    <p>
+                        My first "big" project, I experimented with many new gameplay mechanics as well as learning best practices in the process.
+                    </p><br />
+                    <p>
+                        A traditional hack and slash game, it features melee combat, basic AI to fight, a stamina system and a save and load system among other things.
+                    </p><br />
+                    <p>
+                        I learned how to better work with animations, VFX and sounds and building different gameplay systems that can interact with each other.
+                    </p><br />
                 </section>
             </div>
 
             <!-- Right Column - Video -->
             <div class="project-media">
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1&mute=1"
+                    <iframe src="https://www.youtube.com/embed/FqBZMUv-BtA?autoplay=1&mute=1&rel=0&loop=1&playlist=FqBZMUv-BtA"
+                            frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen>
                     </iframe>

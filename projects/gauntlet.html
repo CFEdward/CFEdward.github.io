@@ -27,7 +27,7 @@
         </button>
         <div class="nav-links">
             <a href="../index.html">Projects</a>
-            <a href="#resume">Resume</a>
+            <a href="../resume.html">Resume</a>
             <a href="mailto:cfedward@proton.me" class="email-link">cfedward@proton.me</a>
             <div class="social-icons desktop-socials">
                 <a href="https://www.linkedin.com/in/eduard-ciofu-952306227/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -39,56 +39,70 @@
 
     <main class="project-main">
         <div class="project-header">
-            <a href="../index.html" class="back-button">
+            <!-- Desktop back button -->
+            <a href="../index.html" class="back-button desktop-only">
                 <i class="fas fa-arrow-left"></i>
                 Back to Projects
             </a>
 
-            <h1 class="project-title">Project Name</h1>
-            <a href="YOUR_GITHUB_URL" class="github-button" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-github"></i>
-                GitHub
-            </a>
+            <h1 class="project-title">Gauntlet</h1>
+
+            <!-- Mobile buttons container -->
+            <div class="project-buttons-container">
+                <!-- Mobile back button -->
+                <a href="../index.html" class="back-button mobile-only">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Projects
+                </a>
+
+                <!-- GitHub button -->
+                <a href="https://github.com/CFEdward/simple-shooter" class="github-button" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i>
+                    GitHub Repo
+                </a>
+            </div>
         </div>
+
         <div class="project-columns">
             <!-- Left Column - Project Details -->
             <div class="project-details">
                 <section class="project-section">
                     <h3>Overview</h3>
-                    <p>A detailed description of the project and its core features. Explain the main objectives and what makes this project unique.</p>
+                    <ul>
+                        <li>Shooting mechanics</li>
+                        <li>AI Detection</li>
+                        <li>AI Movement</li>
+                        <li>Behavior Tree & Blackboard</li>
+                    </ul>
                 </section>
 
                 <section class="project-section">
                     <h3>Technical Details</h3>
                     <ul>
-                        <li><strong>Engine:</strong> Unreal Engine 5</li>
-                        <li><strong>Platform:</strong> Windows/Console</li>
-                        <li><strong>Development Time:</strong> 6 months</li>
-                        <li><strong>Team Size:</strong> Solo Developer</li>
-                        <li><strong>Key Technologies:</strong> C++, Blueprints, Physics Simulation</li>
+                        <li><strong>Engine:</strong> Unreal Engine 4</li>
+                        <li><strong>Role:</strong> Solo Developer</li>
+                        <li><strong>Genre:</strong> Shooter</li>
+                        <li><strong>Platform:</strong> PC</li>
                     </ul>
                 </section>
 
                 <section class="project-section">
                     <h3>Features</h3>
-                    <ul>
-                        <li>Advanced AI Behavior Trees</li>
-                        <li>Procedural Content Generation</li>
-                        <li>Multiplayer Support</li>
-                        <li>Dynamic Weather System</li>
-                    </ul>
-                </section>
-
-                <section class="project-section">
-                    <h3>Development Challenges</h3>
-                    <p>Describe technical challenges faced during development and how they were overcome. Highlight innovative solutions and lessons learned.</p>
+                    <p>
+                        A very simple project, this was created a long time ago and I used this to learn the workflow of C++ coding inside
+                        Unreal Engine, as well as the relationships between C++ and Blueprints.
+                    </p><br />
+                    <p>
+                        It features some basic shooting mechanics, as well as some AI implementation through Behavior Trees for movement and player detection.
+                    </p><br />
                 </section>
             </div>
 
             <!-- Right Column - Video -->
             <div class="project-media">
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1&mute=1"
+                    <iframe src="https://www.youtube.com/embed/YWf_li49k4E?autoplay=1&mute=1&rel=0&loop=1&playlist=YWf_li49k4E"
+                            frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen>
                     </iframe>
