@@ -11,7 +11,12 @@ menuToggle.addEventListener('click', (e) => {
 
 // Close menu when clicking outside
 document.addEventListener('click', (e) => {
-    if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+    const navLinks = document.querySelector('.nav-links');
+    const menuToggle = document.querySelector('.menu-toggle');
+
+    if (navLinks.classList.contains('active') &&
+        !navLinks.contains(e.target) &&
+        !menuToggle.contains(e.target)) {
         navLinks.classList.remove('active');
         updateContentMargin();
     }
