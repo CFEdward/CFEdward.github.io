@@ -89,7 +89,6 @@ document.querySelectorAll('.gallery-container').forEach(container => {
     const leftButton = container.querySelector('.gallery-scroll-left');
     const rightButton = container.querySelector('.gallery-scroll-right');
 
-    // Calculate scroll amount based on first item's width
     const scrollAmount = () => {
         if (!scrollContainer.children.length) return 350;
         const firstItem = scrollContainer.children[0];

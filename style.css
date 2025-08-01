@@ -78,9 +78,9 @@ h1 {
         transition: color 0.3s;
     }
 
-        .nav-links a:hover {
-            color: var(--hover-purple);
-        }
+    .nav-links a:hover {
+        color: var(--hover-purple);
+    }
 
 .social-icons {
     display: flex;
@@ -385,6 +385,7 @@ h1 {
 
 /* Gallery Styles */
 .project-media {
+    min-width: 0; /* Allows column to shrink below content width */
     display: flex;
     flex-direction: column;
     height: auto;
@@ -403,7 +404,6 @@ h1 {
     color: var(--accent-purple);
     margin-bottom: 1.5rem;
     font-size: 1.5rem;
-    text-align: center;
 }
 
 .gallery-container {
@@ -414,17 +414,17 @@ h1 {
 }
 
 .gallery-grid {
+    flex: none !important; /* Remove fixed basis */
+    max-width: 100%; /* Constrain to parent width */
+    width: 100%; /* Take full parent width */
     display: flex;
-    gap: 2rem;
-    max-width: 100%;
+    gap: 1rem;
     overflow-x: auto;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     padding: 0.5rem 0;
     height: 100%;
-    flex: 0 0 30%; /* Adjust based on your needs */
-    max-height: 300px; /* Constrain item height */
 }
 
     .gallery-grid::-webkit-scrollbar {
@@ -432,13 +432,15 @@ h1 {
     }
 
 .gallery-item {
-    flex: 0 0 350px;
+    flex: 0 0 calc(50% - 1rem); /* Adjust to fit container */
+    max-width: 350px; /* But cap at 350px */
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s;
     background: var(--accent-purple);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     max-height: 100%;
+    min-width: 200px;
 }
 
     .gallery-item img {
@@ -736,7 +738,6 @@ footer {
 
     /* Create a flex container for buttons */
     .project-header {
-        display: flex;
         flex-direction: column;
         padding-top: 1rem;
     }
@@ -781,8 +782,6 @@ footer {
         flex-direction: column;
         gap: 2rem;
         padding: 0 1rem;
-        grid-template-columns: unset !important;
-        grid-template-rows: unset !important;
     }
 
     .project-details {
