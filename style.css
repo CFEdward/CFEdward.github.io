@@ -364,6 +364,15 @@ h1 {
         font-size: 1.5rem;
     }
 
+    .project-section li {
+        margin-bottom: 8px; /* optional: add some space between items */
+    }
+
+    .project-section li::before {
+        content: "▹";
+        margin-right: 0.5rem;
+    }
+
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
