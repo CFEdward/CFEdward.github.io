@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation (same as homepage) -->
     <nav class="nav-header">
         <div class="header-titles">
             <a href="../index.html" class="home-link">
@@ -39,27 +38,23 @@
 
     <main class="project-main">
         <div class="project-header">
-            <!-- Desktop back button -->
             <a href="../index.html" class="back-button desktop-only">
                 <i class="fas fa-arrow-left"></i>
                 Back to Projects
             </a>
 
-            <h1 class="project-title">Mars Invasion</h1>
+            <h1 class="project-title">Blaster</h1>
 
-            <!-- Mobile buttons container -->
             <div class="project-buttons-container">
-                <!-- Mobile back button -->
                 <a href="../index.html" class="back-button mobile-only">
                     <i class="fas fa-arrow-left"></i>
                     Back to Projects
                 </a>
 
-                <!-- GitHub button -->
-                <span class="github-button disabled">
+                <a href="https://github.com/CFEdward/MultiplayerShooter" class="github-button" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-github"></i>
-                    No GitHub Repo
-                </span>
+                    GitHub Repo
+                </a>
             </div>
         </div>
 
@@ -69,19 +64,22 @@
                 <section class="project-section">
                     <h3>Overview</h3>
                     <ul>
-                        <li><strong>Top-Down perspective</strong></li>
-                        <li><strong>Waves of enemies</strong></li>
-                        <li><strong>Learned Blueprint scripting</strong></li>
-                        <li><strong>Familiarized with the Engine</strong></li>
+                        <li><strong>Multiplayer via Steam</strong></li>
+                        <li><strong>Replication</strong></li>
+                        <li><strong>Client-side Prediction</strong></li>
+                        <li><strong>Server-side Rewind</strong></li>
+                        <li><strong>Multiple types of Weapons</strong></li>
+                        <li><strong>Powerups</strong></li>
+                        <li><strong>Multiple Game Modes</strong></li>
                     </ul>
                 </section>
 
                 <section class="project-section">
                     <h3>Technical Details</h3>
                     <ul>
-                        <li><strong>Engine:</strong> Unreal Engine 4</li>
+                        <li><strong>Engine:</strong> Unreal Engine 5</li>
                         <li><strong>Role:</strong> Solo Developer</li>
-                        <li><strong>Genre:</strong> Top-Down Swarm</li>
+                        <li><strong>Genre:</strong> Shooter</li>
                         <li><strong>Platform:</strong> PC</li>
                     </ul>
                 </section>
@@ -89,25 +87,59 @@
                 <section class="project-section">
                     <h3>Features</h3>
                     <p>
-                        One of the very first projects I created in order to learn Unreal Engine, made entirely with Blueprint scripting.
+                        This is a complete Multiplayer Shooter game, capable of creating and joining game sessions and
+                        connecting many players across the internet via Steam.
                     </p><br />
                     <p>
-                        It's a very simple game, you control a space marine from a top-down perspective defending against unrelenting waves
-                        of enemies. This project helped me to get familiar with the editor and core concepts like gameplay mechanics, basic
-                        game flow and some basic UI.
+                        Implemented lag compensation techniques such as Client-Side Prediction and Server-Side Rewind,
+                        which in this case stores the location of a player's hitboxes for a given amount of time,
+                        information which can then in turn be used in high lag scenarios.
                     </p><br />
+                    <p>
+                        Many different types of weapons: Assault Rifles, Pistols, Submachine Guns, Rocket Launchers, Grenade Launchers,
+                        Sniper Rifles and throwing Grenades. Some are hit-scan, others are projectile based (for experimentation).
+                    </p><br />
+                    <p>
+                        Different Game Modes: Deathmatch, Team Deathmatch or Capture the Flag.
+                    </p>
                 </section>
             </div>
 
             <!-- Right Column - Media -->
             <div class="project-media">
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/a-SslV_EEPw?autoplay=1&mute=1&rel=0&loop=1&playlist=a-SslV_EEPw"
+                    <iframe src="https://www.youtube.com/embed/jR_PYY107MM?autoplay=1&mute=1&rel=0&loop=1&playlist=jR_PYY107MM"
                             frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen>
                     </iframe>
                 </div>
+
+                <section class="gallery-section">
+                    <h3 class="gallery-title">Gallery</h3>
+                    <div class="gallery-container">
+                        <button class="scroll-arrow gallery-scroll-left" aria-label="Scroll gallery left">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="gallery-grid">
+                            <div class="gallery-item">
+                                <img src="../Content/project_gallery/blaster/blaster_ssr.jpg" alt="Inventory System Screenshot">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../Content/project_gallery/blaster/blaster_powerups.jpg" alt="Equipment Preview">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../Content/project_gallery/blaster/blaster_player.jpg" alt="Item Fragment System">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../Content/project_gallery/blaster/blaster_pickups.jpg" alt="Grid View">
+                            </div>
+                        </div>
+                        <button class="scroll-arrow gallery-scroll-right" aria-label="Scroll gallery right">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </section>
             </div>
         </div>
     </main>

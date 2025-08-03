@@ -56,7 +56,7 @@ document.querySelectorAll('.projects-container').forEach(container => {
     const scrollContainer = container.querySelector('.projects-grid');
     const leftButton = container.querySelector('.scroll-left');
     const rightButton = container.querySelector('.scroll-right');
-    const scrollAmount = 320;
+    const scrollAmount = 395;
 
     function updateButtonStates() {
         leftButton.disabled = scrollContainer.scrollLeft <= 0;
