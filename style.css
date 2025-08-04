@@ -204,16 +204,8 @@ h1 {
     right: 1rem;
 }
 
-.projects-section:first-of-type .project-card {
-    flex: 0 0 375px; /* 25% larger than 300px */
-}
-
-.projects-section:first-of-type .card-image {
-    height: 250px; /* 25% larger than 200px */
-}
-
 .project-card {
-    flex: 0 0 300px;
+    flex: 0 0 375px;
     background: var(--accent-purple);
     border-radius: 10px;
     overflow: hidden;
@@ -228,7 +220,7 @@ h1 {
     }
 
 .card-image {
-    height: 200px;
+    height: 250px;
     background-size: cover;
     background-position: center;
 }

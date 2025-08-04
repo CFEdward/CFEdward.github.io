@@ -4,31 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eduard Ciofu - Personal Portfolio</title>
-    <link rel="icon" type="image/png" href="../Content/icons/ue_favicon.png">
-    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="icon" type="image/png" href="../../Content/icons/ue_favicon.png">
+    <link rel="stylesheet" type="text/css" href="../../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Navigation (same as homepage) -->
     <nav class="nav-header">
         <div class="header-titles">
-            <a href="../index.html" class="home-link">
+            <a href="../../index.html" class="home-link">
                 <h1>EDUARD CIOFU</h1>
             </a>
             <div class="subtitle">Gameplay Programmer with experience in Unreal Engine C++</div>
         </div>
-        <div class="mobile-socials">
-            <a href="https://www.linkedin.com/in/eduard-ciofu-952306227/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/CFEdward" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://www.youtube.com/@KinglessKing7" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-        </div>
+
         <button class="menu-toggle" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
         </button>
+
         <div class="nav-links">
-            <a href="../index.html">Projects</a>
-            <a href="../resume.html">Resume</a>
+            <a href="../../index.html">Projects</a>
+            <a href="../../resume.html">Resume</a>
             <a href="mailto:cfedward@proton.me" class="email-link">cfedward@proton.me</a>
             <div class="social-icons desktop-socials">
+                <a href="https://www.linkedin.com/in/eduard-ciofu-952306227/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/CFEdward" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.youtube.com/@KinglessKing7" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="social-icons mobile-socials-dropdown">
                 <a href="https://www.linkedin.com/in/eduard-ciofu-952306227/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/CFEdward" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
                 <a href="https://www.youtube.com/@KinglessKing7" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
@@ -38,20 +41,24 @@
 
     <main class="project-main">
         <div class="project-header">
-            <a href="../index.html" class="back-button desktop-only">
+            <!-- Desktop back button -->
+            <a href="../../index.html" class="back-button desktop-only">
                 <i class="fas fa-arrow-left"></i>
                 Back to Projects
             </a>
 
-            <h1 class="project-title">Inventory Plugin</h1>
+            <h1 class="project-title">Liberte</h1>
 
+            <!-- Mobile buttons container -->
             <div class="project-buttons-container">
-                <a href="../index.html" class="back-button mobile-only">
+                <!-- Mobile back button -->
+                <a href="../../index.html" class="back-button mobile-only">
                     <i class="fas fa-arrow-left"></i>
                     Back to Projects
                 </a>
 
-                <a href="https://github.com/CFEdward/inventory-plugin/tree/reskin-1" class="github-button" target="_blank" rel="noopener noreferrer">
+                <!-- GitHub button -->
+                <a href="https://github.com/CFEdward/y2-block1" class="github-button" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-github"></i>
                     GitHub Repo
                 </a>
@@ -64,41 +71,51 @@
                 <section class="project-section">
                     <h3>Overview</h3>
                     <ul>
-                        <li><strong>Spatial Inventory</strong></li>
-                        <li><strong>Functional Items</strong></li>
-                        <li><strong>Item Fragment System</strong></li>
-                        <li><strong>Tooltip popups</strong></li>
-                        <li><strong>Equipment</strong></li>
-                        <li><strong>Consumables</strong></li>
-                        <li><strong>Stackable Items</strong></li>
-                        <li><strong>Programmed for Multiplayer</strong></li>
+                        <li><strong>Gameplay Ability System (GAS)</strong></li>
+                        <li><strong>Primary and Secondary Attributes</strong></li>
+                        <li><strong>Gameplay Abilities</strong></li>
+                        <li><strong>Gameplay Effects</strong></li>
+                        <li><strong>Gameplay Tags</strong></li>
+                        <li><strong>Gameplay Cues</strong></li>
+                        <li><strong>UI following both MVC and MVVM (to experiment)</strong></li>
+                        <li><strong>Spell Menu</strong></li>
+                        <li><strong>RPG Enemy Classes</strong></li>
+                        <li><strong>Enemy AI</strong></li>
+                        <li><strong>Enemy Abilities</strong></li>
+                        <li><strong>Leveling System</strong></li>
+                        <li><strong>Save & Load Slot System</strong></li>
+                        <li><strong>CO-OP supported</strong></li>
                     </ul>
                 </section>
 
                 <section class="project-section">
                     <h3>Technical Details</h3>
                     <ul>
-                        <li><strong>Engine:</strong> Unreal Engine 5</li>
-                        <li><strong>Role:</strong> Solo Developer</li>
-                        <li><strong>Genre:</strong> Plugin</li>
-                        <li><strong>Platform:</strong> PC</li>
+                        <li><strong>Engine:</strong> Unity</li>
+                        <li><strong>Team Size:</strong> 5</li>
+                        <li><strong>Role:</strong> Programmer</li>
+                        <li><strong>Genre:</strong> AR Museum</li>
+                        <li><strong>Platform:</strong> Meta Quest</li>
                     </ul>
                 </section>
 
                 <section class="project-section">
                     <h3>Features</h3>
                     <p>
-                        This is a spatial inventory with item grids for different categories (Equippable, Consumable, and Craftable)
-                        and the ability to switch between grids filled with items. Items can be different sizes, each taking up a different
-                        number of squares in the grid, and items can be stackable, allowing for splitting, combining, consuming, and dropping items.
+                        My most ambitious project, using the Gameplay Ability System (GAS), it is a top-down RPG style game complete with a
+                        stats system, abilities, leveling up, spells, attributes, menus and supporting CO-OP, among other things.
                     </p><br />
                     <p>
-                        This is made possible by an <strong>Item Fragment</strong> system whereby items can be customized by adding modular
-                        "Fragments" to give them functionality. Add a Grid Fragment to make the item capable of taking up multiple squares on
-                        the grid, add an Equippable Fragment to make the item equippable, etc.
+                        The player has Primary Attributes and Secondary Attributes that derive from the Primary ones using certain formulas.
+                        This together with the Abilities can be upgraded through a Level Up system.
                     </p><br />
                     <p>
-                        The inventory is coded in its own separate plugin, which can be added to multiple game projects.
+                        This project helped me cover more advanced topics such as custom <strong>Async Tasks, Ability Tasks,
+                        Blueprint Function Libraries, Asset Managers, Singletons, custom Gameplay Effect Contexts, Net Serialization,
+                        Struct Ops Type Traits, C++ Lambdas, game mechanics algorithms</strong> etc.
+                    </p><br />
+                    <p>
+                        GAS is an amazing system and learning its intricacies felt very rewarding.
                     </p>
                 </section>
             </div>
@@ -106,7 +123,7 @@
             <!-- Right Column - Media -->
             <div class="project-media">
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/UWAOS-_bZyc?autoplay=1&mute=1&rel=0&loop=1&playlist=UWAOS-_bZyc"
+                    <iframe src="https://www.youtube.com/embed/WUj9rYbAi_c?autoplay=1&mute=1&rel=0&loop=1&playlist=WUj9rYbAi_c"
                             frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen>
@@ -121,25 +138,19 @@
                         </button>
                         <div class="gallery-grid">
                             <div class="gallery-item">
-                                <img src="../Content/project_gallery/inventory/inventory_fragments.jpg" alt="Inventory System Screenshot">
+                                <img src="../../Content/project_gallery/aura/aura_abilities.jpg" alt="Inventory System Screenshot">
                             </div>
                             <div class="gallery-item">
-                                <img src="../Content/project_gallery/inventory/inventory_tooltip.jpg" alt="Equipment Preview">
+                                <img src="../../Content/project_gallery/aura/aura_attributes.jpg" alt="Equipment Preview">
                             </div>
                             <div class="gallery-item">
-                                <img src="../Content/project_gallery/inventory/inventory_character_1.jpg" alt="Item Fragment System">
+                                <img src="../../Content/project_gallery/aura/aura_slots.jpg" alt="Equipment Preview">
                             </div>
                             <div class="gallery-item">
-                                <img src="../Content/project_gallery/inventory/inventory_character_2.jpg" alt="Grid View">
+                                <img src="../../Content/project_gallery/aura/aura_electrocute.jpg" alt="Item Fragment System">
                             </div>
                             <div class="gallery-item">
-                                <img src="../Content/project_gallery/inventory/inventory_items_1.jpg" alt="Equipment Preview">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="../Content/project_gallery/inventory/inventory_items_2.jpg" alt="Equipment Preview">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="../Content/project_gallery/inventory/inventory_options.jpg" alt="Equipment Preview">
+                                <img src="../../Content/project_gallery/aura/aura_enemies.jpg" alt="Grid View">
                             </div>
                         </div>
                         <button class="scroll-arrow gallery-scroll-right" aria-label="Scroll gallery right">
@@ -163,6 +174,6 @@
         </div>
     </footer>
 
-    <script src="../scripts.js"></script>
+    <script src="../../scripts.js"></script>
 </body>
 </html>

@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eduard Ciofu - Personal Portfolio</title>
-    <link rel="icon" type="image/png" href="../Content/icons/ue_favicon.png">
-    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="icon" type="image/png" href="../../Content/icons/ue_favicon.png">
+    <link rel="stylesheet" type="text/css" href="../../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Navigation (same as homepage) -->
     <nav class="nav-header">
         <div class="header-titles">
-            <a href="../index.html" class="home-link">
+            <a href="../../index.html" class="home-link">
                 <h1>EDUARD CIOFU</h1>
             </a>
             <div class="subtitle">Gameplay Programmer with experience in Unreal Engine C++</div>
@@ -26,8 +26,8 @@
             <i class="fas fa-bars"></i>
         </button>
         <div class="nav-links">
-            <a href="../index.html">Projects</a>
-            <a href="../resume.html">Resume</a>
+            <a href="../../index.html">Projects</a>
+            <a href="../../resume.html">Resume</a>
             <a href="mailto:cfedward@proton.me" class="email-link">cfedward@proton.me</a>
             <div class="social-icons desktop-socials">
                 <a href="https://www.linkedin.com/in/eduard-ciofu-952306227/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -40,26 +40,26 @@
     <main class="project-main">
         <div class="project-header">
             <!-- Desktop back button -->
-            <a href="../index.html" class="back-button desktop-only">
+            <a href="../../index.html" class="back-button desktop-only">
                 <i class="fas fa-arrow-left"></i>
                 Back to Projects
             </a>
 
-            <h1 class="project-title">Mars Invasion</h1>
+            <h1 class="project-title">Pegasus</h1>
 
             <!-- Mobile buttons container -->
             <div class="project-buttons-container">
                 <!-- Mobile back button -->
-                <a href="../index.html" class="back-button mobile-only">
+                <a href="../../index.html" class="back-button mobile-only">
                     <i class="fas fa-arrow-left"></i>
                     Back to Projects
                 </a>
 
                 <!-- GitHub button -->
-                <span class="github-button disabled">
+                <a href="https://github.com/CFEdward/second-shooter" class="github-button" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-github"></i>
-                    No GitHub Repo
-                </span>
+                    GitHub Repo
+                </a>
             </div>
         </div>
 
@@ -69,10 +69,13 @@
                 <section class="project-section">
                     <h3>Overview</h3>
                     <ul>
-                        <li><strong>Top-Down perspective</strong></li>
-                        <li><strong>Waves of enemies</strong></li>
-                        <li><strong>Learned Blueprint scripting</strong></li>
-                        <li><strong>Familiarized with the Engine</strong></li>
+                        <li><strong> Animation Blueprints</strong></li>
+                        <li><strong>AI Behavior Trees</strong></li>
+                        <li><strong>Shooting system</strong></li>
+                        <li><strong>Simple inventory</strong></li>
+                        <li><strong>Data driven weapon types</strong></li>
+                        <li><strong>Dynamic crosshairs</strong></li>
+                        <li><strong>Material creation</strong></li>
                     </ul>
                 </section>
 
@@ -81,7 +84,7 @@
                     <ul>
                         <li><strong>Engine:</strong> Unreal Engine 4</li>
                         <li><strong>Role:</strong> Solo Developer</li>
-                        <li><strong>Genre:</strong> Top-Down Swarm</li>
+                        <li><strong>Genre:</strong> Shooter</li>
                         <li><strong>Platform:</strong> PC</li>
                     </ul>
                 </section>
@@ -89,20 +92,28 @@
                 <section class="project-section">
                     <h3>Features</h3>
                     <p>
-                        One of the very first projects I created in order to learn Unreal Engine, made entirely with Blueprint scripting.
+                        A more ambitious shooter project where I explored many more Unreal Engine features, as well as new gameplay mechanics.
+                        A few examples are extensive usage of Animation Blueprints (through Anim Instance), 1D and 2D Blendspaces, strafing, turn-in-place,
+                        Aim Offsets, Inverse Kinematics, animation curves, run leaning, hips turning and crouching.
                     </p><br />
                     <p>
-                        It's a very simple game, you control a space marine from a top-down perspective defending against unrelenting waves
-                        of enemies. This project helped me to get familiar with the editor and core concepts like gameplay mechanics, basic
-                        game flow and some basic UI.
+                        Weapon fire with recoil animations and reloading. Simple inventory to hold different types of weapons, with automatic
+                        and semi-automatic gunfire. Weapon types are data driven and stored in data tables for easy modifications or additions.
                     </p><br />
+                    <p>
+                        Dynamic crosshairs that spread in reaction to character speed, weapon fire, aiming and jumping.
+                    </p><br />
+                    <p>
+                        Some Material creation, including post-process materials, outline effects, glow/pulse effects
+                        and material functions. Enemy AI with Behavior Trees and Blackboard components.
+                    </p>
                 </section>
             </div>
 
             <!-- Right Column - Media -->
             <div class="project-media">
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/a-SslV_EEPw?autoplay=1&mute=1&rel=0&loop=1&playlist=a-SslV_EEPw"
+                    <iframe src="https://www.youtube.com/embed/pcBcdU2b47s?autoplay=1&mute=1&rel=0&loop=1&playlist=pcBcdU2b47s"
                             frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen>
@@ -124,6 +135,6 @@
         </div>
     </footer>
 
-    <script src="../scripts.js"></script>
+    <script src="../../scripts.js"></script>
 </body>
 </html>

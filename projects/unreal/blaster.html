@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eduard Ciofu - Personal Portfolio</title>
-    <link rel="icon" type="image/png" href="../Content/icons/ue_favicon.png">
-    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="icon" type="image/png" href="../../Content/icons/ue_favicon.png">
+    <link rel="stylesheet" type="text/css" href="../../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation (same as homepage) -->
     <nav class="nav-header">
         <div class="header-titles">
-            <a href="../index.html" class="home-link">
+            <a href="../../index.html" class="home-link">
                 <h1>EDUARD CIOFU</h1>
             </a>
             <div class="subtitle">Gameplay Programmer with experience in Unreal Engine C++</div>
@@ -26,8 +25,8 @@
             <i class="fas fa-bars"></i>
         </button>
         <div class="nav-links">
-            <a href="../index.html">Projects</a>
-            <a href="../resume.html">Resume</a>
+            <a href="../../index.html">Projects</a>
+            <a href="../../resume.html">Resume</a>
             <a href="mailto:cfedward@proton.me" class="email-link">cfedward@proton.me</a>
             <div class="social-icons desktop-socials">
                 <a href="https://www.linkedin.com/in/eduard-ciofu-952306227/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -39,24 +38,20 @@
 
     <main class="project-main">
         <div class="project-header">
-            <!-- Desktop back button -->
-            <a href="../index.html" class="back-button desktop-only">
+            <a href="../../index.html" class="back-button desktop-only">
                 <i class="fas fa-arrow-left"></i>
                 Back to Projects
             </a>
 
-            <h1 class="project-title">Pegasus</h1>
+            <h1 class="project-title">Blaster</h1>
 
-            <!-- Mobile buttons container -->
             <div class="project-buttons-container">
-                <!-- Mobile back button -->
-                <a href="../index.html" class="back-button mobile-only">
+                <a href="../../index.html" class="back-button mobile-only">
                     <i class="fas fa-arrow-left"></i>
                     Back to Projects
                 </a>
 
-                <!-- GitHub button -->
-                <a href="https://github.com/CFEdward/second-shooter" class="github-button" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/CFEdward/MultiplayerShooter" class="github-button" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-github"></i>
                     GitHub Repo
                 </a>
@@ -69,20 +64,20 @@
                 <section class="project-section">
                     <h3>Overview</h3>
                     <ul>
-                        <li><strong> Animation Blueprints</strong></li>
-                        <li><strong>AI Behavior Trees</strong></li>
-                        <li><strong>Shooting system</strong></li>
-                        <li><strong>Simple inventory</strong></li>
-                        <li><strong>Data driven weapon types</strong></li>
-                        <li><strong>Dynamic crosshairs</strong></li>
-                        <li><strong>Material creation</strong></li>
+                        <li><strong>Multiplayer via Steam</strong></li>
+                        <li><strong>Replication</strong></li>
+                        <li><strong>Client-side Prediction</strong></li>
+                        <li><strong>Server-side Rewind</strong></li>
+                        <li><strong>Multiple types of Weapons</strong></li>
+                        <li><strong>Powerups</strong></li>
+                        <li><strong>Multiple Game Modes</strong></li>
                     </ul>
                 </section>
 
                 <section class="project-section">
                     <h3>Technical Details</h3>
                     <ul>
-                        <li><strong>Engine:</strong> Unreal Engine 4</li>
+                        <li><strong>Engine:</strong> Unreal Engine 5</li>
                         <li><strong>Role:</strong> Solo Developer</li>
                         <li><strong>Genre:</strong> Shooter</li>
                         <li><strong>Platform:</strong> PC</li>
@@ -92,20 +87,20 @@
                 <section class="project-section">
                     <h3>Features</h3>
                     <p>
-                        A more ambitious shooter project where I explored many more Unreal Engine features, as well as new gameplay mechanics.
-                        A few examples are extensive usage of Animation Blueprints (through Anim Instance), 1D and 2D Blendspaces, strafing, turn-in-place,
-                        Aim Offsets, Inverse Kinematics, animation curves, run leaning, hips turning and crouching.
+                        This is a complete Multiplayer Shooter game, capable of creating and joining game sessions and
+                        connecting many players across the internet via Steam.
                     </p><br />
                     <p>
-                        Weapon fire with recoil animations and reloading. Simple inventory to hold different types of weapons, with automatic
-                        and semi-automatic gunfire. Weapon types are data driven and stored in data tables for easy modifications or additions.
+                        Implemented lag compensation techniques such as Client-Side Prediction and Server-Side Rewind,
+                        which in this case stores the location of a player's hitboxes for a given amount of time,
+                        information which can then in turn be used in high lag scenarios.
                     </p><br />
                     <p>
-                        Dynamic crosshairs that spread in reaction to character speed, weapon fire, aiming and jumping.
+                        Many different types of weapons: Assault Rifles, Pistols, Submachine Guns, Rocket Launchers, Grenade Launchers,
+                        Sniper Rifles and throwing Grenades. Some are hit-scan, others are projectile based (for experimentation).
                     </p><br />
                     <p>
-                        Some Material creation, including post-process materials, outline effects, glow/pulse effects
-                        and material functions. Enemy AI with Behavior Trees and Blackboard components.
+                        Different Game Modes: Deathmatch, Team Deathmatch or Capture the Flag.
                     </p>
                 </section>
             </div>
@@ -113,12 +108,38 @@
             <!-- Right Column - Media -->
             <div class="project-media">
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/pcBcdU2b47s?autoplay=1&mute=1&rel=0&loop=1&playlist=pcBcdU2b47s"
+                    <iframe src="https://www.youtube.com/embed/jR_PYY107MM?autoplay=1&mute=1&rel=0&loop=1&playlist=jR_PYY107MM"
                             frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen>
                     </iframe>
                 </div>
+
+                <section class="gallery-section">
+                    <h3 class="gallery-title">Gallery</h3>
+                    <div class="gallery-container">
+                        <button class="scroll-arrow gallery-scroll-left" aria-label="Scroll gallery left">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="gallery-grid">
+                            <div class="gallery-item">
+                                <img src="../../Content/project_gallery/blaster/blaster_ssr.jpg" alt="Inventory System Screenshot">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../../Content/project_gallery/blaster/blaster_powerups.jpg" alt="Equipment Preview">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../../Content/project_gallery/blaster/blaster_player.jpg" alt="Item Fragment System">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../../Content/project_gallery/blaster/blaster_pickups.jpg" alt="Grid View">
+                            </div>
+                        </div>
+                        <button class="scroll-arrow gallery-scroll-right" aria-label="Scroll gallery right">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </section>
             </div>
         </div>
     </main>
@@ -135,6 +156,6 @@
         </div>
     </footer>
 
-    <script src="../scripts.js"></script>
+    <script src="../../scripts.js"></script>
 </body>
 </html>
